@@ -1,14 +1,16 @@
+/* ---------- GLOBAL STYLES ---------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
+/* ---------- CONTAINER ---------- */
 .container {
   display: flex;
   flex-direction: row;
@@ -16,12 +18,12 @@ body {
   align-items: stretch;
   max-width: 1000px;
   margin: 50px auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   border-radius: 10px;
-  background-color: white;
   overflow: hidden;
 }
 
+/* ---------- LEFT PANEL ---------- */
 .left-panel {
   flex: 1;
   background-color: #fff;
@@ -34,24 +36,25 @@ body {
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .left-panel h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 
 .left-panel p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
 }
 
+/* ---------- SOCIAL ICONS ---------- */
 .social-icons i {
   font-size: 22px;
   color: #333;
@@ -60,32 +63,32 @@ body {
 }
 
 .social-icons i:hover {
-  color: #0077b5; /* or your preferred highlight color */
+  color: #0077b5;
 }
 
-
+/* ---------- RIGHT PANEL ---------- */
 .right-panel {
-    flex: 2;
-    background-color: #e6ffd5;
-    padding: 40px 30px;
-    border-left: 2px solid #a3a3ff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex: 2;
+  background-color: #e6ffd5;
+  padding: 40px 30px;
+  border-left: 2px solid #a3a3ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .right-panel h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .right-panel p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
 }
 
-
+/* ---------- BUTTON ---------- */
 button {
   margin-top: 30px;
   width: 150px;
@@ -98,12 +101,14 @@ button {
   transition: all 0.3s;
 }
 
-
 button:hover {
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablet / Medium Screens */
 @media (max-width: 992px) {
   .container {
     max-width: 90%;
@@ -122,28 +127,47 @@ button:hover {
   }
 }
 
-/* Mobile screens */
+/* Mobile screens: stack panels vertically */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    margin: 30px auto;
-    border-radius: 8px;
+    flex-direction: column;  /* Stack left + right */
+    margin: 20px auto;
   }
 
   .left-panel, .right-panel {
     width: 100%;
-    border-left: none;
-    border-top: 2px solid #a3a3ff;
-    padding: 25px;
+    padding: 20px;
     text-align: center;
+    border-left: none;
   }
 
   .right-panel {
+    margin-top: 20px;
+    border-top: 2px solid #a3a3ff;  /* optional separation line */
     background-color: #f0ffeb;
   }
 
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .left-panel h1 {
+    font-size: 24px;
+  }
+
+  .right-panel h2 {
+    font-size: 22px;
+  }
+
+  .right-panel p {
+    font-size: 15px;
+    text-align: justify;  /* improves readability */
+  }
+
   .social-icons i {
-    margin: 8px;
+    margin: 5px;
+    font-size: 20px;
   }
 
   button {
