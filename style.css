@@ -10,17 +10,27 @@ body {
 }
 
 .container {
-    display: flex;
-    max-width: 1000px;
-    margin: 50px auto;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 50px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
 }
 
 .left-panel {
-    flex: 1;
-    background-color: #fff;
-    padding: 40px 20px;
-    text-align: center;
+  flex: 1;
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-img {
@@ -77,65 +87,87 @@ body {
 
 
 button {
-    margin-top: 30px;
-    width: 120px;
-    padding: 10px;
-    border: 1px solid #333;
-    background-color: #fff;
-    cursor: pointer;
-    font-weight: bold;
+  margin-top: 30px;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #333;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s;
 }
+
 
 button:hover {
     background-color: #333;
     color: #fff;
 }
-/* Mobile and small tablets */
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .right-panel, .left-panel {
+    padding: 30px 20px;
+  }
+
+  .right-panel h2 {
+    font-size: 22px;
+  }
+
+  .right-panel p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile screens */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        margin: 20px;
-    }
+  .container {
+    flex-direction: column;
+    margin: 30px auto;
+    border-radius: 8px;
+  }
 
-    .left-panel, .right-panel {
-        flex: none;
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-        border-left: none;
-        border-top: 2px solid #a3a3ff; /* optional for separation */
-    }
+  .left-panel, .right-panel {
+    width: 100%;
+    border-left: none;
+    border-top: 2px solid #a3a3ff;
+    padding: 25px;
+    text-align: center;
+  }
 
-    .right-panel {
-        margin-top: 20px;
-    }
+  .right-panel {
+    background-color: #f0ffeb;
+  }
 
-    .social-icons i {
-        margin: 5px;
-    }
+  .social-icons i {
+    margin: 8px;
+  }
 
-    button {
-        width: 80%;
-        max-width: 200px;
-    }
+  button {
+    width: 80%;
+    max-width: 200px;
+  }
 }
 
 /* Extra small phones */
 @media (max-width: 480px) {
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
 
-    .left-panel h1 {
-        font-size: 22px;
-    }
+  .left-panel h1 {
+    font-size: 22px;
+  }
 
-    .right-panel h2 {
-        font-size: 20px;
-    }
+  .right-panel h2 {
+    font-size: 20px;
+  }
 
-    .right-panel p {
-        font-size: 14px;
-    }
+  .right-panel p {
+    font-size: 14px;
+  }
 }
