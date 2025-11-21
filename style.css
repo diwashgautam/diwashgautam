@@ -90,3 +90,52 @@ button:hover {
     background-color: #333;
     color: #fff;
 }
+/* Mobile and small tablets */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .left-panel, .right-panel {
+        flex: none;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        border-left: none;
+        border-top: 2px solid #a3a3ff; /* optional for separation */
+    }
+
+    .right-panel {
+        margin-top: 20px;
+    }
+
+    .social-icons i {
+        margin: 5px;
+    }
+
+    button {
+        width: 80%;
+        max-width: 200px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .left-panel h1 {
+        font-size: 22px;
+    }
+
+    .right-panel h2 {
+        font-size: 20px;
+    }
+
+    .right-panel p {
+        font-size: 14px;
+    }
+}
